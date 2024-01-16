@@ -162,7 +162,17 @@ body {
     margin-left: 10px;
     margin-right: 10px;
 }
-  
+
+.contact-us {
+    font-size: 32px;
+    margin-left: 25%;
+}
+
+.contact-us h2{
+    font-weight: 200;
+    font-weight: bold;
+    font-size: 32px;
+}
 .footer {
     margin-top: 50px;
     color: #666666;
