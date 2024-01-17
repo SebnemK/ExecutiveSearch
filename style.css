@@ -27,7 +27,7 @@ body {
 
 .nav-link {
     color: #666666 !important;
-    font-weight: bold !important;
+    font-weight: 400 !important;
 }
 
 .nav-link:hover, .nav-link:active {
@@ -53,17 +53,28 @@ body {
     z-index: -2;  /* ::before'daki tanımlar öne çıksın diye burayı geriye itiyoruz */
  }
 
- .hero.focus {
+ /* Cep telefonları için */
+@media screen and (max-width: 600px) {
+    .hero {
+        height: 40vh;
+    }
+}
+ 
+.hero.focus {
     background-image: url('images/blurPeopleFocusedMugAndLaptop.jpg');
  }
 
-  .hero.consultants {
+.hero.consultants {
     background-image: url('images/tabletInFrontOfWhiteBoard.jpg');
  }
 
-   .hero.about {
+.hero.about {
     background-image: url('images/twoPeopleTalkingSitting.jpg');
  }
+
+ .hero.contact {
+    background-image: url('images/customer-service-business-contact-concept-wooden-cube-block-which-print-screen-letter-telephone-email-address-message.jpg');
+ } 
 
 .hero::before {
     content: '';  /* pseudo ları kullanırken content belirtilmek zorundaymış, ama herhangi bir text eklemeyeceğimiz için boş bırakıyoruz */
@@ -72,9 +83,9 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);  /* resmin parlaklığını azaltmak için üzerine opacity si az siyah çekiyoruz */
+    background-color: rgba(0,0,0,0.5);  /* resmin parlaklığını azaltmak için üzerine opacity si az siyah çekiyoruz */ 
     z-index: -1;
-}
+} 
 
 .hero h1 {
     font-weight: 200;
@@ -87,18 +98,56 @@ body {
     letter-spacing: 1px;
 }
 
+/* Tabletler için */
+@media screen and (max-width: 992px) {
+    .hero h1 {
+        font-weight: 200;
+        font-size: 48px;
+        margin: -20px 0 20px;
+    }
+
+    .hero p {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+}
+
+/* Cep telefonları için */
+@media screen and (max-width: 600px) { 
+    .hero h1 {
+        font-weight: 200;
+        font-size: 36px;
+        margin: -20px 0 20px;
+    }
+
+    .hero p {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+}
+
 .content {
     font-weight: 400;
 }
 
-.wrapper-left {
-    display: grid;
-    grid-template-columns: [col-left] 30% [col-right] 70%;  /* Ekranın %30 u birinci kolon, %70'iikinci kolon oluyor*/
-}
+/* Cep telefonu dışında */
+@media screen and (min-width: 601px){
+    .wrapper-left {
+        display: grid;
+        grid-template-columns: [col-left] 30% [col-right] 70%;  /* Ekranın %30 u birinci kolon, %70'iikinci kolon oluyor*/
+    }
 
-.wrapper-right {
-    display: grid;
-    grid-template-columns: [col-left] 70% [col-right] 30%;  /* Ekranın %30 u birinci kolon, %70'iikinci kolon oluyor*/
+    .wrapper-right {
+        display: grid;
+        grid-template-columns: [col-left] 70% [col-right] 30%;  /* Ekranın %30 u birinci kolon, %70'iikinci kolon oluyor*/
+    }
+    .col-mobile {
+        display: none;
+    }
+
+    .col-left {
+        margin-right: 30px;
+    }
 }
 
 .wrapper-grid {
@@ -109,8 +158,18 @@ body {
 
 }
 
-.col-left {
-    margin-right: 30px;
+
+/* Cep telefonlarında */
+@media screen and (max-width: 600px){
+    .wrapper-left {
+        margin: 20px ;
+    }
+    .wrapper-right {
+        margin: 20px;
+    }
+    .col-right h2 {
+        display: none;
+    }
 }
 
 .content h2, .content h3 {
@@ -124,6 +183,21 @@ body {
     line-height: 1.7;
     text-align: justify;
     /* letter-spacing: 1.2px; */
+}
+
+/* Cep telefonlarında */
+@media screen and (max-width: 600px) {
+    .content h2, .content h3 {
+        font-size: 24px;
+        margin: 20px 0;
+    }
+
+    .content p {
+        font-size: 14px;
+        color: #444444;
+        line-height: 1,5;
+        text-align: justify;
+    }
 }
 
 .focus-areas-hero p{
@@ -140,7 +214,7 @@ body {
     margin-right: 10px;
 }
 
-.focus-area-content {
+.focus-areas-content {
     margin-bottom: 50px;
     margin-left: 10px;
     margin-right: 10px;
@@ -154,16 +228,34 @@ body {
     margin: 10px;
 }
 
-.contact-us {
-    font-size: 32px;
-    margin-left: 25%;
+/* Cep telefonlarında */
+@media screen and (max-width: 600px) {
+    .consultant-picture {
+        width: 150px;
+        height: 150px;
+        border-color: #666666;
+        border: solid;
+        margin: 10px;
+    }
 }
 
-.contact-us h2{
+.contact-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-weight: 200;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 32px;  
 }
+
+
+/* Cep telefonlarında */
+@media screen and (max-width: 600px) {
+    .contact-us a{
+        font-size: 24px;    
+    }
+}
+
 .footer {
     margin-top: 50px;
     color: #666666;
@@ -177,7 +269,7 @@ body {
     padding-top: 20px;
 }
 
-.footer a {
+.footer a, .contact-us  a{
     text-decoration: none;
-    color: #666666;
+    color: #444444;
 }
