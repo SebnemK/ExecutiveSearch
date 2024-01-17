@@ -21,51 +21,19 @@ body {
     margin: 0 auto;
 }
 
-.nav {
-    position: fixed;
-    background-color: #ffffff;
-    top:0;
-    left: 0;
-    right: 0;
-    transition: all 0.3s ease-in-out;
+.container-fluid {
+    margin: 10px 40px !important;
 }
 
-.nav .container {
-    display: flex;  /* aynı satırda yan yana olmaları için*/
-    justify-content: space-between;  /* menü items sağa kaysın site adı ile araları açılsın diye*/
-    align-items: center;
-    padding: 20px 0;
-    transition: all 0.3s ease-in-out;
+.nav-link {
+    color: #666666 !important;
+    font-weight: bold !important;
 }
 
-.nav ul {
-    display: flex; /* aynı satırda yan yana olmaları için*/
-    list-style-type: none;
-    align-items: center;
-    justify-items: center;
-} 
-
-.nav a {
-    color: #666666;
-    font-size: 14px;
-    text-decoration: none;
-    padding: 5px 15px;
-    transition: all 0.3s ease-in-out;
+.nav-link:hover, .nav-link:active {
+    color: rgb(104,79,144) !important;
+    font-weight: bold !important;
 }
-
-.nav.active {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.nav.active .container {
-    padding: 10px 0;
-}
-
-.nav a.current, .nav a:hover {
-    color: rgb(104,79,144);
-    font-weight: bold;
-}
-
 
 .hero {
     background-image: url('images/tabletAndPaperInHands.jpg');
@@ -87,6 +55,14 @@ body {
 
  .hero.focus {
     background-image: url('images/blurPeopleFocusedMugAndLaptop.jpg');
+ }
+
+  .hero.consultants {
+    background-image: url('images/tabletInFrontOfWhiteBoard.jpg');
+ }
+
+   .hero.about {
+    background-image: url('images/twoPeopleTalkingSitting.jpg');
  }
 
 .hero::before {
@@ -125,6 +101,13 @@ body {
     grid-template-columns: [col-left] 70% [col-right] 30%;  /* Ekranın %30 u birinci kolon, %70'iikinci kolon oluyor*/
 }
 
+.wrapper-grid {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+
+}
 
 .col-left {
     margin-right: 30px;
@@ -161,6 +144,14 @@ body {
     margin-bottom: 50px;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.consultant-picture {
+    width: 299px;
+    height: 299px;
+    border-color: #666666;
+    border: solid;
+    margin: 10px;
 }
 
 .contact-us {
