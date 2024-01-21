@@ -93,7 +93,6 @@ a {
  .hero.contact {
     background-image: url('images/arche_contact.png');
     height: 50vh;
-    background-position: center;
  } 
 
 .hero::before {
