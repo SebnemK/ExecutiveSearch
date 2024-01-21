@@ -245,6 +245,10 @@ a {
     }
 }
 
+.card img {
+    height: 40vh;
+}
+
 .card-body {
     display: flex;
     flex-direction: column;
