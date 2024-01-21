@@ -70,8 +70,8 @@ a {
         height: 40vh;
     }
     .company-logo {
-        width: 75%;
-        height: 75%;
+        width: 50%;
+        height: 50%;
     }
 }
  
@@ -94,6 +94,7 @@ a {
  .hero.contact {
     background-image: url('images/arche_contact.png');
     height: 50vh;
+    background-position: center;
  } 
 
 .hero::before {
