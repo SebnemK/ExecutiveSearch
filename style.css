@@ -16,6 +16,10 @@ body {
     padding-bottom: 50px;
 }
 
+a {
+    color: #444444;
+}
+
 .container {
     max-width: 1300px;
     margin: 0 auto;
@@ -68,12 +72,13 @@ body {
 }
  
 .hero.focus {
-    background-image: url('images/blurPeopleFocusedMugAndLaptop.jpg');
+    background-image: url('images/tabletInFrontOfWhiteBoard.jpg');
+    
     height: 70vh;
  }
 
 .hero.consultants {
-    background-image: url('images/tabletInFrontOfWhiteBoard.jpg');
+    background-image: url('images/blurPeopleFocusedMugAndLaptop.jpg');
     height: 70vh;
  }
 
@@ -160,14 +165,6 @@ body {
     .col-left {
         margin-right: 30px;
     }
-}
-
-.wrapper-grid {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-content: space-between;
-
 }
 
 /* Tabletler ve Cep telefonlarında */
