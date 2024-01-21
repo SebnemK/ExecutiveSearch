@@ -69,11 +69,14 @@ a {
     .hero {
         height: 40vh;
     }
+    .company-logo {
+        width: 75%;
+        height: 75%;
+    }
 }
  
 .hero.focus {
     background-image: url('images/tabletInFrontOfWhiteBoard.jpg');
-    
     height: 70vh;
  }
 
@@ -244,10 +247,6 @@ a {
         margin: auto;
     }
 }
-
-/* .card img {
-    height: 40vh;
-} */
 
 .card-body {
     display: flex;
