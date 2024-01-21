@@ -245,9 +245,9 @@ a {
     }
 }
 
-.card img {
+/* .card img {
     height: 40vh;
-}
+} */
 
 .card-body {
     display: flex;
